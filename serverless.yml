@@ -1,0 +1,12 @@
+service: kubeless
+
+provider:
+  name: kubeless
+  runtime: nodejs6
+
+plugins:
+  - serverless-kubeless
+
+functions:
+  policy:
+    handler: handler.policy
