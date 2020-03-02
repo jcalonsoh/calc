@@ -1,0 +1,12 @@
+age_limit = 65
+
+[health]
+cero = 0.279
+one = 0.4396
+two = 0.5599
+
+[dental]
+cero = 0.12
+one =  0.1950
+two = 0.2480
+
