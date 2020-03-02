@@ -5,7 +5,8 @@
   "main": "\"\"",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "PORT=8080 node server.js",
+    "serverless": "serverless offline start"
   },
   "keywords": [
     "serverless",
@@ -17,7 +18,13 @@
     "@hapi/hapi": "^19.1.1",
     "@iarna/toml": "^2.2.3",
     "node-fetch": "^2.6.0",
-    "serverless-kubeless": "^0.4.4"
+    "serverless": "^1.65.0",
+    "serverless-http": "^2.3.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "serverless-kubeless": "^0.9.1",
+    "serverless-kubeless-offline": "^0.1.9",
+    "serverless-offline": "^5.12.1",
+    "serverless-webpack": "^5.3.1"
+  }
 }

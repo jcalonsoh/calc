@@ -1,12 +1,24 @@
-service: kubeless
+service: bice-calc
 
 provider:
   name: kubeless
-  runtime: nodejs6
+  runtime: nodejs12
+  memorySize: 1024 # optional (1024 MB default)
+  versionFunctions: false # optional default is true
+
+custom:
+  serverless-offline:
+    port: 3000
 
 plugins:
   - serverless-kubeless
+ # - serverless-kubeless-offline
+  - serverless-offline
 
 functions:
-  policy:
-    handler: handler.policy
+  endpoint:
+    handler: handler.endpoint
+    events:
+      - http:
+          path: insurance/policy/cost
+          method: get
